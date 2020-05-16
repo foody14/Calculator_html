@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+function hasilPangkat(nilai1, nilai2, nilai3)
+{  
+   for (var i = 1; i < nilai2; i++)
+   {
+       nilai1 = nilai1 * nilai3; 
+   }
+   return nilai1;
+}
+function hitung() 
+{
+	var angka1 = parseInt(document.getElementById("angka1").value);
+	var angka2 = parseInt(document.getElementById("angka2").value);
+	var operator = document.querySelector('input[name=operator]:checked').value
+	var nilaiPangkat = hasilPangkat(angka1,angka2,angka1);
+
+	if (operator === "tambah")
+	{
+	   document.getElementById("output").innerHTML = angka1 + angka2;
+	}
+	else if (operator === "kali")
+	{
+	   document.getElementById("output").innerHTML = angka1 * angka2;
+	}
+	else if (operator === "bagi")
+	{
+	   document.getElementById("output").innerHTML = angka1 / angka2;
+	}
+	else if (operator === "pangkat")
+	{
+	   document.getElementById("output").innerHTML = nilaiPangkat;
+	}
+}
+</script>
+
+<input type="radio" id="tambah" name="operator" value="tambah"><label for="tambah">Tambah</label>
+<input type="radio" id="kali" name="operator" value="kali"><label for="kali">Kali</label>
+<input type="radio" id="bagi" name="operator" value="bagi"><label for="bagi">Bagi</label>
+<input type="radio" id="pangkat" name="operator" value="pangkat"><label for="pangkat">Pangkat</label>
+<br>
+<input type="text" id="angka1" placeholder="Angka 1"> 
+<input type="text" id="angka2" placeholder="Angka 2">
+
+<button onclick="hitung()">Hasil</button>
+<p id="output"></p>
+
+</body>
+</html>
+
+
