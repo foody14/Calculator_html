@@ -1,0 +1,121 @@
+@font-face {
+ 	font-family: "DS-Digital";
+ 	src: url("/home/foody/Personal/font_downloaded/ds_digital/DS-DIGI.TTF");
+}
+
+@font-face {
+	font-family: "American Captain";
+	src: url("/home/foody/Personal/font_downloaded/american_captain/AmericanCaptain.ttf");
+}
+
+@font-face {
+	font-family: "Quicken Demo";
+	src: url("/home/foody/Personal/font_downloaded/quicken_3/Quicken Demo.ttf");
+}
+
+
+.container {
+	width: 260px;
+        height: 420px;
+	text-align: center;
+        border: 2px solid violet;
+        background: linear-gradient(#c3e8f1, #a4bafb);
+	margin: 0px;
+	overflow: auto;
+}
+
+.footer {
+        width: 256px;
+        height: 40px;
+        border: 2px solid skyBlue;
+	text-align: center;
+	background: darkBlue;
+	color: white;
+	padding: 0;
+}
+h1 {
+	color: darkBlue;
+	font-family: "American Captain";
+}
+
+.button_container {
+	width: 195px;
+	height: 230px;
+	margin: 5px 30px 5px 30px;
+	padding: 3px;
+}
+
+.total {
+	height: 40px;
+	width: 40px;
+	margin: 1px;
+	font-size: 15px;
+}
+
+.layout_angka {
+	height: 180px;
+	float: left;
+	margin: 5px 0 0 5px;
+}
+
+.tombol_angka {
+	height: 40px;
+	width: 40px;
+	margin: 2px 0 2px 0;
+}
+
+.layout_operator {
+	height: 180px;
+	margin: 5px 5px 0 0;
+}
+
+.tombol_operator {
+	height: 40px;
+	width: 40px;
+	margin: 2px 0 2px 0;
+}
+
+.clear_button {
+	background: radial-gradient(#ff0000, #ee0000);
+	height: 40px;
+	width: 40px;
+	margin: 0px 5px 5px 0;
+}
+
+.result_button {
+	background: radial-gradient(#66cc66, #779977);
+        height: 40px;
+        width: 128px;
+        padding-right: 2px;
+	float: left;
+	margin: 0px 0 5px 5px;
+}
+
+.display_container {
+	width: 180px;
+	height: 50px;
+	margin: 10px 35px 0 35px;
+	border: 2px solid #aaaaaa;
+	background: #ddeeff;
+}
+
+.main_number {
+	margin: 2px 2px 2px 2px;
+	font-size: 25px;
+	font-family: "DS-Digital";
+	text-align: right;
+}
+
+.history {
+	margin: 0;
+	text-align: right;
+	font-size: 12px;
+        font-family: "DS-Digital";
+	color: gray;
+}
+
+.credit {
+	font-family: "Quicken Demo";
+}
+
+
