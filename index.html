@@ -1,52 +1,50 @@
 <!DOCTYPE html>
 <html>
+<head>
+   <link type="text/css" href="style.css" rel="stylesheet">
+   <script type="text/javascript" src="calculator.js"></script>	
+   <title>Calculator</title>
+</head>
 <body>
-<script>
-function hasilPangkat(nilai1, nilai2, nilai3)
-{  
-   for (var i = 1; i < nilai2; i++)
-   {
-       nilai1 = nilai1 * nilai3; 
-   }
-   return nilai1;
-}
-function hitung() 
-{
-	var angka1 = parseInt(document.getElementById("angka1").value);
-	var angka2 = parseInt(document.getElementById("angka2").value);
-	var operator = document.querySelector('input[name=operator]:checked').value
-	var nilaiPangkat = hasilPangkat(angka1,angka2,angka1);
-
-	if (operator === "tambah")
-	{
-	   document.getElementById("output").innerHTML = angka1 + angka2;
-	}
-	else if (operator === "kali")
-	{
-	   document.getElementById("output").innerHTML = angka1 * angka2;
-	}
-	else if (operator === "bagi")
-	{
-	   document.getElementById("output").innerHTML = angka1 / angka2;
-	}
-	else if (operator === "pangkat")
-	{
-	   document.getElementById("output").innerHTML = nilaiPangkat;
-	}
-}
-</script>
-
-<input type="radio" id="tambah" name="operator" value="tambah"><label for="tambah">Tambah</label>
-<input type="radio" id="kali" name="operator" value="kali"><label for="kali">Kali</label>
-<input type="radio" id="bagi" name="operator" value="bagi"><label for="bagi">Bagi</label>
-<input type="radio" id="pangkat" name="operator" value="pangkat"><label for="pangkat">Pangkat</label>
-<br>
-<input type="text" id="angka1" placeholder="Angka 1"> 
-<input type="text" id="angka2" placeholder="Angka 2">
-
-<button onclick="hitung()">Hasil</button>
-<p id="output"></p>
-
+<div class="container">
+   <h1>Calculator</h1>
+   <div class="display_container" name="display_box">
+   	<p id="history" class="history">0<br></p>
+	<p id="history_operator" class="history"><br></p>
+	<p id="output" class="main_number">0</p>
+   </div>
+   <div class="button_container" name="button_container">
+   <div class="layout_angka" name="box_angka">
+   	<button onclick=addNumber("1") class="tombol_angka" id="1" value="1" name="number">1</button>
+	<button onclick=addNumber("2") class="tombol_angka" id="2" value="2" name="number">2</button>
+	<button onclick=addNumber("3") class="tombol_angka" id="3" value="3" name="number">3</button>
+	<br>
+	<button onclick=addNumber("4") class="tombol_angka" id="4" value="4" name="number">4</button>
+        <button onclick=addNumber("5") class="tombol_angka" id="5" value="5" name="number">5</button>
+        <button onclick=addNumber("6") class="tombol_angka" id="6" value="6" name="number">6</button>
+        <br>
+	<button onclick=addNumber("7") class="tombol_angka" id="7" value="7" name="number">7</button>
+        <button onclick=addNumber("8") class="tombol_angka" id="8" value="8" name="number">8</button>
+        <button onclick=addNumber("9") class="tombol_angka" id="9" value="9" name="number">9</button>
+	<br>
+	<button onclick=addNumber("0") class="tombol_angka" id="0" value="0" name="number">0</button>
+        <button onclick=addNumber("00") class="tombol_angka" id="00" value="00" name="number">00</button>
+        <button onclick=addNumber("dec") class="tombol_angka" id="dec" value="." name="number">.</button> 
+   </div>
+   <div class="layout_operator" name="box_operator">
+   	<button onclick=addOperator("tambah") class="tombol_operator" id="tambah" value="+" name="operator">+</button><br>
+      	<button onclick=addOperator("kurang") class="tombol_operator" id="kurang" value="-" name="operator">-</button><br>
+      	<button onclick=addOperator("kali") class="tombol_operator" id="kali" value="*" name="operator">*</button><br>
+      	<button onclick=addOperator("bagi") class="tombol_operator" id="bagi" value="/" name="operator">/</button><br>
+   </div>
+   <div class="function_button">
+	<button onclick=equalSign() class="result_button" id="result" value="result">=</button>
+	<button onclick=clearSign() class="clear_button" id="clear" value="clear">C</button>
+   </div>
+</div>
+<div class="footer">
+   <p class="credit" id="credit">credit for @foody14</p>
+</div>
 </body>
 </html>
 
