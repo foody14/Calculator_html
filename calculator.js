@@ -88,10 +88,10 @@ function clearSign()
 }
 
 function hasilPangkat(nilai1, nilai2, nilai3)
-{  
+{
    for (var i = 1; i < nilai2; i++)
    {
-       nilai1 = nilai1 * nilai3; 
+       nilai1 = nilai1 * nilai3;
    }
    return nilai1;
 }
